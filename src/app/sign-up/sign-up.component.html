@@ -1,0 +1,33 @@
+<div class="frmstyle" [hidden] = 'isUserRegistered'>
+  <h3>sign up</h3>
+<form class="example-form" #signUpForm = 'ngForm' (ngSubmit) = 'storeUsers(signUpForm)'>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" name = 'name' [(ngModel)] = 'name' required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="User name" name = 'userName' [(ngModel)] = 'userName' required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" type = 'email' name = 'email' [(ngModel)] = 'email' #emailId = 'ngModel' required email>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Password" name = 'password' [(ngModel)] = 'password' minlength = "8" required type = 'password'>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Confirm password" name = 'confirmPassword' [(ngModel)] = 'confirmPassword' minlength = "8" required type = 'password'>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Mobile" name = 'mobile' [(ngModel)] = 'mobile' maxlength = "10" required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder = "Address" name = 'address' [(ngModel)] = 'address' maxlength = "30" required></textarea>
+  </mat-form-field>
+  <div class="example-button-row txtcntr">
+    <button mat-flat-button color="primary" type = 'submit' [disabled] = 'signUpForm.form.invalid || (password != confirmPassword)'>Sign Up</button>
+  </div>
+</form>
+</div>
+
+<div [hidden] = '!isUserRegistered' class="thanksmsg">
+    Thanks for registering, Please <a routerLink="/login">Click here </a> to Login
+  </div>

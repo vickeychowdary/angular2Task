@@ -1,0 +1,31 @@
+.details{
+    width: 30%;
+    margin: auto;
+    margin-top: 10pc;
+    border: 2px solid #7d7676b5;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    height: 110px;
+}
+.pad6{
+    padding: 6px;
+}
+.details label{
+    font-family: Aller_Bold;
+}
+.sty label{
+    width: 20%;
+    float: left;
+    margin-top: -2px;
+}
+.sty h5{
+    width: 6%;
+    float: left;
+    margin: 0px;
+}
+.sty p{
+    width: 74%;
+    float: left;
+    margin: 0px;
+}

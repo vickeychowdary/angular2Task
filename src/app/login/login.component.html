@@ -1,0 +1,15 @@
+<div class="frmstyle marcntr">
+  <h3>Login</h3>
+  <form class="example-form" #loginForm='ngForm' (ngSubmit)='login(loginForm.value)'>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Username/Email/Mobile" name='loginId' [(ngModel)]='loginId' required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" name='password' [(ngModel)]='password' minlength='8' type='password'
+        required>
+    </mat-form-field>
+    <div class="example-button-row txtcntr pad10">
+      <button mat-flat-button color="primary" type='submit' [disabled]='loginForm.form.invalid'>Login</button>
+    </div>
+  </form>
+</div>
